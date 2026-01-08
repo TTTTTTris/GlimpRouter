@@ -6,7 +6,7 @@
 
 Official implementation of **GlimpRouter: Efficient Collaborative Inference by Glimpsing One Token of Thoughts**.
 
-| ![./assets/overview.pdf](./assets/overview.pdf) |
+| ![./assets/overview.png](./assets/overview.png) |
 |:--:|
 |GlimpRouter is a lightweight, training-free step-wise routing framework that uses the entropy of the initial token in each reasoning step to decide whether a small model or a large model should generate the step.|
 
