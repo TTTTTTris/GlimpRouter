@@ -1,5 +1,5 @@
 import argparse
-from glimprouter import glimprouter
+from glimp_router import glimprouter
 from datasets import load_dataset
 import os
 from tqdm import tqdm

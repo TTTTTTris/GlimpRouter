@@ -6,14 +6,11 @@
 
 Official implementation of **GlimpRouter: Efficient Collaborative Inference by Glimpsing One Token of Thoughts**.
 
-This repository contains a lightweight, training-free step-wise routing framework that uses the entropy of the initial token in each reasoning step to decide whether a small model or a large model should generate the step.
+| ![./assets/overview.pdf](./assets/overview.pdf) |
+|:--:|
+|GlimpRouter is a lightweight, training-free step-wise routing framework that uses the entropy of the initial token in each reasoning step to decide whether a small model or a large model should generate the step.|
 
 
-<!-- ## Figure
-
-![GlimpRouter overview figure placeholder](./assets/figure_placeholder.png)
-
-*Figure 1: Placeholder for the GlimpRouter overview diagram.* -->
 
 
 ## Code
@@ -72,7 +69,7 @@ Notes:
 ## Datasets
 
 The current code supports the following datasets:
-- AIME 2024/2025 (math)
+- AIME24/AIME25 (math)
 - MATH-500 (math)
 - GPQA (general reasoning)
 - LiveCodeBench v5/v6 (code generation)
