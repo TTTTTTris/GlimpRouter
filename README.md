@@ -1,6 +1,6 @@
 # GlimpRouter: Efficient Collaborative Inference by Glimpsing One Token of Thoughts
 
-<!-- <a href="ARXIV_URL_TBD"><img src="https://img.shields.io/badge/arxiv-TBD-orange?logo=arxiv&logoColor=white"/></a> -->
+<a href=https://arxiv.org/abs/2601.05110><img src="https://img.shields.io/badge/arxiv-2601.05110-red?logo=arxiv&logoColor=white"/></a>
 
 ---
 
@@ -122,16 +122,19 @@ Please see the paper for full results. Placeholder examples:
 - AIME25: +X.X% accuracy, -Y.Y% latency vs. large model baseline.
 - GPQA: +X.X% accuracy, -Y.Y% latency vs. large model baseline. -->
 
-<!-- ## BibTeX
+## BibTeX
 
 ```
-@article{glimprouter2025,
-  title={GlimpRouter: Efficient Collaborative Inference by Glimpsing One Token of Thoughts},
-  author={First Author and Second Author and Others},
-  journal={arXiv preprint arXiv:XXXX.XXXXX},
-  year={2025}
+@misc{zeng2026glimprouterefficientcollaborativeinference,
+      title={GlimpRouter: Efficient Collaborative Inference by Glimpsing One Token of Thoughts}, 
+      author={Wenhao Zeng and Xuteng Zhang and Yuling Shi and Chao Hu and Yuting Chen and Beijun Shen and Xiaodong Gu},
+      year={2026},
+      eprint={2601.05110},
+      archivePrefix={arXiv},
+      primaryClass={cs.AI},
+      url={https://arxiv.org/abs/2601.05110}, 
 }
-``` -->
+```
 
 <!-- ## Acknowledgements
 
