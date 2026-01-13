@@ -1,6 +1,7 @@
 # GlimpRouter: Efficient Collaborative Inference by Glimpsing One Token of Thoughts
 
-<a href=https://arxiv.org/abs/2601.05110><img src="https://img.shields.io/badge/arxiv-2601.05110-red?logo=arxiv&logoColor=white"/></a>
+<a href=https://arxiv.org/abs/2601.05110><img src="https://img.shields.io/badge/arxiv-2601.05110-red?logo=arxiv&logoColor=white"/></a>&nbsp;&nbsp;<a href=https://arxiv.org/abs/2601.05110><img src="https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Paper-yellow"/></a>
+
 
 ---
 

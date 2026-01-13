@@ -1,4 +1,5 @@
 #!/bin/bash
+
 set -e
 
 # # 1. Create conda environment (replace with your preferred env name)

@@ -2,7 +2,6 @@
 # Example runner; edit the parameters below for your experiment.
 #################################################
 
-
 CONFIG_PATH="config.json"
 DATASET_NAME="lcbv5"
 REPEAT_NUM=6
