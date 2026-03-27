@@ -1,0 +1,36 @@
+nohup: ignoring input
+Args:
+{'dataset_name': 'lcbv6',
+ 'model_size': '32b',
+ 'output_dir': './large32b_small4b_first_token_entropy_10_results',
+ 'repeat_num': 1,
+ 'score_method': 'first_token_entropy',
+ 'score_threshold': 10,
+ 'small_model_size': '4b',
+ 'token_budget': 8192}
+Generating train split: 0 examples [00:00, ? examples/s]Generating train split: 32 examples [00:00, 164.32 examples/s]Generating train split: 56 examples [00:00, 122.37 examples/s]Generating train split: 77 examples [00:00, 131.01 examples/s]Generating train split: 115 examples [00:00, 142.77 examples/s]Generating train split: 136 examples [00:00, 144.17 examples/s]Generating train split: 159 examples [00:01, 132.13 examples/s]Generating train split: 175 examples [00:01, 140.86 examples/s]
+Generation:   0%|          | 0/175 [00:00<?, ?it/s]Generation:   1%|          | 1/175 [00:16<48:07, 16.60s/it]Generation:   1%|          | 1/175 [00:52<2:31:26, 52.22s/it]
+Traceback (most recent call last):
+  File "/home/jiayi_tian/GlimpRouter/src/main.py", line 170, in <module>
+    main(args)
+  File "/home/jiayi_tian/GlimpRouter/src/main.py", line 105, in main
+    result = glimprouter(
+             ^^^^^^^^^^^^
+  File "/home/jiayi_tian/GlimpRouter/src/glimp_router.py", line 303, in glimprouter
+    base_model_step, finished, num_output_tokens_base = generate_answer(
+                                                        ^^^^^^^^^^^^^^^^
+  File "/home/jiayi_tian/GlimpRouter/src/glimp_router.py", line 113, in generate_answer
+    response = client.chat.completions.create(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jiayi_tian/miniconda3/envs/specreason/lib/python3.12/site-packages/openai/_utils/_utils.py", line 286, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jiayi_tian/miniconda3/envs/specreason/lib/python3.12/site-packages/openai/resources/chat/completions/completions.py", line 1192, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/home/jiayi_tian/miniconda3/envs/specreason/lib/python3.12/site-packages/openai/_base_client.py", line 1297, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jiayi_tian/miniconda3/envs/specreason/lib/python3.12/site-packages/openai/_base_client.py", line 1070, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.BadRequestError: Error code: 400 - {'error': {'message': "This model's maximum context length is 10000 tokens. However, you requested 2048 output tokens and your prompt contains at least 7953 input tokens, for a total of at least 10001 tokens. Please reduce the length of the input prompt or the number of requested output tokens. (parameter=input_tokens, value=7953)", 'type': 'BadRequestError', 'param': 'input_tokens', 'code': 400}}

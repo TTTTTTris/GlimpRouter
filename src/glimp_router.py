@@ -22,21 +22,21 @@ def get_model(model_size):
 
 # %%
 model_names = {
-    "32b": "YOUR_MODEL_NAME_FOR_32B",  # NOTE: change to the name of your 32b large model, e.g. "org/model-32b"
-    "4b": "YOUR_MODEL_NAME_FOR_4B",  # NOTE: change to the name of your 4b small model
+    "32b": "deepseek-ai/DeepSeek-R1-Distill-Qwen-32B",  # NOTE: change to the name of your 32b large model, e.g. "org/model-32b"
+    "4b": "deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B",  # NOTE: change to the name of your 4b small model
 }
 
 ports = {
-    "32b": "YOUR_PORT_FOR_32B",  # NOTE: change to the port of your 32b large model, e.g. "11125"
-    "4b": "YOUR_PORT_FOR_4B",  # NOTE: change to the port of your 4b small model, e.g. "11130"
+    "32b": 40000,  # NOTE: change to the port of your 32b large model, e.g. "11125"
+    "4b": 40001,  # NOTE: change to the port of your 4b small model, e.g. "11130"
 }
 
 clients = {}
 for size, full_name in model_names.items():
     # OpenAI-compatible client; replace placeholders with your local endpoint.
     clients[size] = OpenAI(
-        api_key="YOUR_API_KEY",  # NOTE: change to the api key of your model
-        base_url="YOUR_BASE_URL",  # NOTE: change to the base url of your model, e.g. f"http://localhost:{ports[size]}/v1"
+        api_key="EMPTY",
+        base_url=f"http://localhost:{ports[size]}/v1",
     )
 
 def get_first_user_msg(problem, options=None):
@@ -83,7 +83,8 @@ def generate_new_step(problem, steps_so_far, model_size, options=None, stop_toke
     response = client.chat.completions.create(
         model=get_model(model_size),
         messages=messages,
-        temperature=0.6, top_p=0.95,
+        # temperature=0.6, top_p=0.95,
+        temperature=0,
         max_tokens=512,
         stop=[stop_token],
         extra_body=extra_body,
@@ -112,7 +113,8 @@ def generate_answer(problem, steps_so_far, model_size, options=None):
     response = client.chat.completions.create(
         model=get_model(model_size),
         messages=messages,
-        temperature=0.6, top_p=0.95,
+        # temperature=0.6, top_p=0.95,
+        temperature=0,
         max_tokens=2048,
         extra_body=extra_body,
     )
@@ -299,7 +301,7 @@ def glimprouter(
 
         # Generation of Final Answer
         base_model_step, finished, num_output_tokens_base = generate_answer(
-            problem, steps_so_far, model_size, options=options
+            problem, steps_so_far, small_model_size, options=options
         )
         small_model_step, num_output_tokens_small = None, None
         score, justification = None, None

@@ -9,3 +9,5 @@ data/lcbv5/
 data/lcbv6/
 nohup*.out
 server/vllm_logs
+
+src/data/

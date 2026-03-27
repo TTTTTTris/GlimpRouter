@@ -46,9 +46,9 @@ def get_dataset(dataset_name):
     elif dataset_name == "lcbv6":
         dataset = load_dataset(
             'json',
-            data_files="YOUR_DIRECTORY_OF_LCB_DATASET",  # NOTE: change to the directory of your LCB dataset, e.g. "../data/lcbv6/test6.jsonl"
+            data_files="data/test6.jsonl",  # NOTE: change to the directory of your LCB dataset, e.g. "../data/lcbv6/test6.jsonl"
             split="train",
-        )
+        ) 
         options = "lcb"
     else:
         raise NotImplementedError
